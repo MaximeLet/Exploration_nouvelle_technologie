@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="TP2.Core.Views.MainMasterDetailPage"
+             Title="MainPage">
+    
+    <MasterDetailPage.Master>
+        <NavigationPage Title="Required Foo" Icon="hamburger.png" AutomationId="Menu">
+            <x:Arguments>    
+                <ContentPage Title="Menu">
+                    <StackLayout Padding="40">
+                        <Button AutomationId="Welcome" Text="Page d'accueil" Command="{Binding NavigateToWelcomePageCommand}" />
+                        <Button Text="L'inventaire" Command="{Binding NavigateToInventoryPageCommand}" />
+                        <Button Text="Création de QR code" Command="{Binding NavigateToQrCodeCreatorPageCommand}" />
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

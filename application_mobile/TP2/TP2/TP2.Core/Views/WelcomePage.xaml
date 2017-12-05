@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="TP2.Core.Views.WelcomePage"
+             Title="Pade d'accueil">
+    <ScrollView>
+        <StackLayout Spacing="0" Padding="0">
+            <StackLayout HeightRequest="100" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Spacing="10">
+                <Button x:Name="Scan"
+                        AutomationId="Scan"
+				        Text="Scanner un QR code" 
+				        HorizontalOptions="Center"
+				        VerticalOptions="Center"
+				        TextColor="Blue"
+				        BackgroundColor="RosyBrown"
+				        Command="{Binding ScanButtonClickedCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

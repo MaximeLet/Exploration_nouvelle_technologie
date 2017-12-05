@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+                        x:Class="TP2.Core.App">
+   <prism:PrismApplication.Resources>
+        <ResourceDictionary>
+            <Color x:Key="WhiteColor">#ffffff</Color>
+            <Color x:Key="BlackColor">#000000</Color>
+            <Color x:Key="BackgroundColor">#F4F6FA</Color>
+            <Color x:Key="AccentColor">#00857D</Color>
+            <Color x:Key="LightGreenColor">#83D01B</Color>
+            <Color x:Key="GreenColor">#00A69C</Color>
+            <Color x:Key="DarkGreenColor">#00857D</Color>
+            <Color x:Key="GrayColor">#e2e2e2</Color>
+            <Color x:Key="ErrorColor">#ff5252</Color>
+            <Color x:Key="TextColor">#757575</Color>
+
+            <Style x:Key="ValidationErrorLabelStyle"
+                   TargetType="{x:Type Label}">
+                <Setter Property="TextColor"
+                        Value="{StaticResource ErrorColor}" />
+            </Style>
+
+
+        </ResourceDictionary>
+
+    </prism:PrismApplication.Resources>
+
+</prism:PrismApplication>

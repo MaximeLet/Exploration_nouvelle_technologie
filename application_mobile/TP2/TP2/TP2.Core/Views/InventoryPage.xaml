@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="TP2.Core.Views.InventoryPage"
+             Title="Inventaire">
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Liste de l'inventaire" FontSize="30" FontAttributes="Bold"></Label>
+            </StackLayout>
+        <ListView x:Name ="productListView" RefreshAllowed="True" ItemsSource="{Binding Products}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<ViewCell>
+                        <ContentView Padding="5">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Modal}"
+                                               FontAttributes="Bold" FontSize="20"/>
+                                <StackLayout HorizontalOptions="EndAndExpand"  VerticalOptions="StartAndExpand">
+                                    <Button BackgroundColor="Transparent" Text="X" Command="{Binding DeleteProductFromInventoryCommand}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

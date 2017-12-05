@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="TP2.Core.Views.ScanPage"
+             Title="Scanner">
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Analyse du QR code" FontSize="30" FontAttributes="Bold"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <BoxView HeightRequest="1" WidthRequest="350" Color="Black" HorizontalOptions="FillAndExpand"></BoxView>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" Spacing="10">
+                <StackLayout HorizontalOptions="Center">
+                    <StackLayout Orientation="Horizontal" >
+                        <Label x:Name="Modal" Text="{Binding product.Modal, Mode=TwoWay, StringFormat='Modèle: {0:N}'}" FontSize="Large" XAlign="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="{Binding product.SerialNumber, Mode=TwoWay,  StringFormat='Numéro de série: {0:N}'}" FontSize="Large" XAlign="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" >
+                        <Label Text="{Binding product.DateProduction, Mode=TwoWay,StringFormat='Date de production: {0:dd MMMM yyyy}'}" FontSize="Large" XAlign="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="{Binding product.RadioId, Mode=TwoWay,  StringFormat='Numéro de la radio: {0:N}'}" FontSize="Large" XAlign="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
+                <Button Text="Sauvegarder" IsVisible="{Binding ConfirmButtonsAreAvailable.Value}" Command="{Binding SaveElementScannedCommand}"/>
+                <Button Text="Annuler" IsVisible="{Binding ConfirmButtonsAreAvailable.Value}" Command="{Binding CancelElementScannedCommand}"/>
+            </StackLayout>
+            <StackLayout HeightRequest="75" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Spacing="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <BoxView HeightRequest="1" WidthRequest="350" Color="Black" HorizontalOptions="FillAndExpand"></BoxView>
+                </StackLayout>
+                <Button x:Name="Scan"
+				        Text="Cliquer ici pour ouvrir le scanner" 
+				        AutomationId="ScannerButton"
+                        HorizontalOptions="Center"
+				        VerticalOptions="Center"
+				        TextColor="Blue"
+				        BackgroundColor="RosyBrown"
+                        Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="TP2.Core.Views.DisplayNewQrCodePage"
+             Title="Nouveau Qr code">
+             <ScrollView>
+             <StackLayout Padding="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image AutomationId="QrCodeImage" Source="{Binding NewQrCodePath}"
+                       HeightRequest="150"
+                       WidthRequest="150"/>
+                 <StackLayout HorizontalOptions="StartAndExpand" Padding="10">
+                     <Grid>
+                         <Grid.RowDefinitions>
+                             <RowDefinition />
+                             <RowDefinition />
+                             <RowDefinition />
+                             <RowDefinition />
+                         </Grid.RowDefinitions>
+
+                         <Grid.ColumnDefinitions>
+                             <ColumnDefinition Width="Auto"/>
+                             <ColumnDefinition Width="Auto"/>
+                         </Grid.ColumnDefinitions>
+                         
+                         <Label Text="Modèle:"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Grid.Row="0"
+                                Grid.Column="0"/>
+                         
+                         <Label Text="{Binding Model}"
+                                FontSize="16"
+                                TextColor="DarkGreen"
+                                Grid.Row="0"
+                                Grid.Column="1"/>
+                         
+                         <Label Text="Numéro de série:"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Grid.Row="1"
+                                Grid.Column="0"/>
+                         
+                         <Label Text="{Binding SerialNumber}"
+                                FontSize="16"
+                                TextColor="DarkGreen"
+                                Grid.Row="1"
+                                Grid.Column="1"/>
+                         <Label Text="Radio ID:"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Grid.Row="2"
+                                Grid.Column="0"/>
+                         
+                         <Label Text="{Binding RadioId}"
+                                FontSize="16"
+                                TextColor="DarkGreen"
+                                Grid.Row="2"
+                                Grid.Column="1"/>  
+                            
+                         
+                         <Label Text="Date de fabication:"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Grid.Row="3"
+                                Grid.Column="0"/>
+                         
+                         <Label Text="{Binding Date, StringFormat='{0:dd MMMM yyyy HH:mm }'}"
+                                FontSize="16"
+                                TextColor="DarkGreen"
+                                Grid.Row="3"
+                                Grid.Column="1"/>
+                      
+                     </Grid>
+                 </StackLayout>
+             </StackLayout>  
+             </ScrollView>
+</ContentPage>

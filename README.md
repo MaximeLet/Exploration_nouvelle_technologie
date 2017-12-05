@@ -13,5 +13,5 @@ un scanner pour décoder les *QR codes et les codes à barres*.
 Chaque outil d'expérimentation contient son **README** et les instructions sont dans ceux-ci.
 
 ## IMPORTANT
-** Je vous conseil fortement de clôner le projet proche de la racine de votre machine.** Sinon, il est problable que vous 
+**Je vous conseil fortement de clôner le projet proche de la racine de votre machine.** Sinon, il est problable que vous 
 aillez des problèmes en ouvrant la solution. Surtout pour les projet en **.NET** .

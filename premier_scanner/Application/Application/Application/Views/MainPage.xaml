@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Application"
+             x:Class="Application.MainPage"             Padding="0,40,0,0"
+             Icon="hamburger.png"
+             Title="Application de gestion">
+   
+	<StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+		<StackLayout>
+			<Button Text="Bye"></Button>
+			<Button Text="Allo"/>
+		</StackLayout>
+		
+	</StackLayout>
+</ContentPage>

@@ -1,6 +1,6 @@
 # Création de QR code
 ## Quoi à installer?
-1. Vous devez avoir python 2.7 sur votre poste de travail. Si vous ne l'avez pas télécharger le à cette addresse: https://www.python.org/downloads/release/python-2713/
+1. Vous devez avoir python 2.7 sur votre poste de travail. Si vous ne l'avez pas télécharger le à cette adresse: https://www.python.org/downloads/release/python-2713/
 . Vous devez par la suite, execcuter le fichier **.exe** installer le tout dans le **C**. Par la suite, vous devez rajouter
 deux *PATH* dans vos **variable d'environnement**, soit *C:\Python27* et *C:\Python27\Scripts* . Vous pouvez par la suite tester
 dans une console, soit **CMD** ou **Powershell**. Normalement tout fonctionne.

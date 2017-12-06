@@ -1,4 +1,8 @@
 # Exploration_nouvelle_technologie
+# Auteurs:
+- **Maxime Létourneau**
+- **Anthony Caron-Bédard**
+
 ## Les différents outils d'expérimentations.
 Dans chaque répertoire, il y a l'outil d'expérimentation qui va avec.
 1. Dans le premier répertoire, soit **application_mobile**,on retrouve l'application mobile qui intergre les deux outils
